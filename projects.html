@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects - G. Sriha</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+    .page h1{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 80px;
+  background:white;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.circle{
+width:40px;
+height:40px;
+background:#7c3aed;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+}
+nav a{
+text-decoration:none;
+color:black;
+margin-left:25px;
+font-size:18px;
+padding:8px 15px;
+border-radius:6px;
+
+transition:0.3s;
+}
+
+
+
+nav a:hover{
+background:#7c3aed;
+color:white;
+
+transform:translateY(-5px);
+}
+    header {
+     background-color:white;
+      color: black;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 16px;
+    }
+    .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #7c3aed;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+    .projects {
+      display: flex;
+      justify-content: center;
+      background-color:#f5f5f5;
+      flex-wrap: wrap;
+      margin: 30px;
+    }
+    .project-card {
+      display: inline-block;
+      width: 280px; 
+      height: 200px;
+      margin: 20px;
+      padding: 25px;
+      background:#e9e4f5; 
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2); 
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+    }
+    .project-card h3 {
+      margin: 10px 0;
+      font-size: 20px;
+      color: #2c3e50;
+    }
+    .project-card p {
+      font-size: 15px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+ <header class="page">
+
+<div class="logo">
+<div class="circle">S</div>
+<h2>Sriha Gara</h2>
+</div>
+
+<nav>
+<a  href="portfolio.html">Home</a>
+<a href="about.html">About</a>
+<a class="btn" href="projects.html">Projects</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+  <header>
+
+    <h1>Projects Portfolio</h1>
+    <p>G. Sriha | Computer Science Background</p>
+  </header>
+
+  <section class="projects">
+    <div class="project-card">
+      <h3>AI Chatbot</h3>
+      <p>Conversational agent built using NLP techniques for customer support.</p>
+    </div>
+    <div class="project-card">
+      <h3>Image Recognition</h3>
+      <p>Deep learning model to classify and detect objects in images.</p>
+    </div>
+    <div class="project-card">
+      <h3>Recommendation System</h3>
+      <p>AI-powered system suggesting movies and products based on user behavior.</p>
+    </div>
+    <div class="project-card">
+      <h3>Medical Diagnosis AI</h3>
+      <p>Machine learning project predicting disease likelihood from patient data.</p>
+    </div>
+  </section>
+</body>
+</html>
