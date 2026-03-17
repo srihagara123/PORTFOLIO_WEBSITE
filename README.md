@@ -28,7 +28,7 @@ This portfolio website showcases my skills, projects, and learning journey in pr
 
 📂 Projects Included
 
-- 📄 Resume Website
+- 📄 Small ML projects
 - 🌐 Personal Portfolio Website
 - (More projects coming soon...)
 
