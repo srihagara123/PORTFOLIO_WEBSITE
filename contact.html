@@ -114,6 +114,226 @@ transform:translateY(-5px);
     .social-links a img:hover {
       transform: scale(1.2);
     }
+ /* Base styles remain the same */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  .top h1 {
+    padding: 15px 40px;
+  }
+
+  nav a {
+    font-size: 16px;
+    margin-left: 15px;
+  }
+
+  .contact-card {
+    width: 80%;
+    margin: 30px auto;
+    padding: 25px;
+  }
+}
+
+/* Tablets and large phones */
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+    font-size: 15px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  .contact-card {
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .contact-card p {
+    font-size: 14px;
+  }
+
+  .social-links a img {
+    width: 35px;
+    height: 35px;
+  }
+}
+footer {
+  background: #121212; /* dark background */
+  color: #fff;
+  padding: 50px 20px;
+  margin-top: 60px;
+  border-top: 3px solid #7c3aed; /* purple accent line */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-container div {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-container h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #7c3aed; /* purple headings */
+}
+
+.footer-container p,
+.footer-container a {
+  font-size: 14px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-container a:hover {
+  color: #7c3aed;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-newsletter form {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.footer-newsletter button {
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+  background: #5b2bbd;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  font-size: 20px;
+  color: #ccc;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #7c3aed;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+
+
+
+/* Small phones */
+@media (max-width: 480px) {
+  .circle {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .logo h2 {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  header p {
+    font-size: 12px;
+  }
+
+  .contact-card {
+    width: 100%;
+    margin: 15px auto;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .contact-card h2, .contact-card h3 {
+    font-size: 16px;
+  }
+
+  .social-links a img {
+    width: 30px;
+    height: 30px;
+  }
+}
+/* Responsive footer */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-newsletter form {
+    flex-direction: column;
+  }
+
+  .footer-newsletter input,
+  .footer-newsletter button {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -157,5 +377,58 @@ transform:translateY(-5px);
       <a href="https://www.linkedin.com/feed/" target="_blank"><img src="linkedin-icon.jpg" alt="LinkedIn"></a>
     </div>
   </section>
+  <!-- Footer -->
+<footer>
+  <div class="footer-container">
+
+    <!-- About Me -->
+    <div class="footer-about">
+      <h3>About Me</h3>
+      <p>I’m Sriha Gara, a Computer Science student specializing in AI & ML. 
+         Passionate about building intelligent systems, data analysis, and modern web development.</p>
+    </div>
+
+    <!-- Academic / Office Info -->
+    <div class="footer-office">
+      <h3>Academic Info</h3>
+      <p>Amrita Vishwa Vidyapeetham, Kerala</p>
+      <p>B.Tech CSE (AI & ML), 2025–2029</p>
+      <p>Email: <a href="mailto:garasriha@gmail.com">garasriha@gmail.com</a></p>
+      <p>Phone: +91-9876543210</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Connect / Newsletter -->
+    <div class="footer-newsletter">
+      <h3>Connect</h3>
+      <form>
+        <input type="email" placeholder="Enter your email id" required>
+        <button type="submit">➤</button>
+      </form>
+      <div class="social-icons">
+        <a href="https://github.com/srihagara123" target="_blank" title="GitHub">🐙</a>
+        <a href="https://www.linkedin.com/feed/" target="_blank" title="LinkedIn">🔗</a>
+        <a href="mailto:garasriha@gmail.com" title="Email">📧</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bottom">
+    <p>&copy; 2026 Sriha Gara - All Rights Reserved.</p>
+  </div>
+</footer>
+
 </body>
 </html>

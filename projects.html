@@ -78,38 +78,280 @@ transform:translateY(-5px);
   text-decoration: none;
   border-radius: 4px;
 }
-    .projects {
-      display: flex;
-      justify-content: center;
-      background-color:#f5f5f5;
-      flex-wrap: wrap;
-      margin: 30px;
-    }
-    .project-card {
-      display: inline-block;
-      width: 280px; 
-      height: 200px;
-      margin: 20px;
-      padding: 25px;
-      background:#e9e4f5; 
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2); 
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 18px rgba(0,0,0,0.25);
-    }
-    .project-card h3 {
-      margin: 10px 0;
-      font-size: 20px;
-      color: #2c3e50;
-    }
-    .project-card p {
-      font-size: 15px;
-      color: #555;
-    }
+   .projects {
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: center;      /* center cards */
+  margin: 30px auto;
+  max-width: 800px;         /* keeps layout neat */
+  padding: 0 20px;
+}
+
+.project-card {
+  width: 100%;
+  max-width: 600px;
+  margin: 15px 0;
+  padding: 25px;
+  background: #e9e4f5;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+.project-card p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Style for links inside cards */
+.project-card a {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #7c3aed;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.project-card a:hover {
+  background: #5b2bbd;
+}
+    /* Responsive adjustments */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  .page h1 {
+    padding: 15px 40px;
+  }
+
+  nav a {
+    font-size: 16px;
+    margin-left: 15px;
+  }
+
+ 
+}
+@media (max-width: 768px) {
+  .projects {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .project-card {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .project-card h3 {
+    font-size: 18px;
+  }
+
+  .project-card p {
+    font-size: 14px;
+  }
+}
+
+/* Tablets and large phones */
+@media (max-width: 768px) {
+  .page h1 {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px 10px 0 0;
+    font-size: 15px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+ 
+
+ 
+}
+footer {
+  background: #121212; /* dark background */
+  color: #fff;
+  padding: 50px 20px;
+  margin-top: 60px;
+  border-top: 3px solid #7c3aed; /* purple accent line */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-container div {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-container h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #7c3aed; /* purple headings */
+}
+
+.footer-container p,
+.footer-container a {
+  font-size: 14px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-container a:hover {
+  color: #7c3aed;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-newsletter form {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.footer-newsletter button {
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+  background: #5b2bbd;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  font-size: 20px;
+  color: #ccc;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #7c3aed;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+
+
+/* Small phones */
+@media (max-width: 480px) {
+  .circle {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .logo h2 {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  header p {
+    font-size: 12px;
+  }
+
+  .project-card {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .project-card h3 {
+    font-size: 16px;
+  }
+
+  .project-card p {
+    font-size: 13px;
+  }
+}
+/* Responsive footer */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-newsletter form {
+    flex-direction: column;
+  }
+
+  .footer-newsletter input,
+  .footer-newsletter button {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+}
+
+
   </style>
 </head>
 <body>
@@ -141,6 +383,7 @@ transform:translateY(-5px);
       <h3>Telco Churn Data Cleaning</h3>
       <p>preparing the telecommunications customer churn dataset so it is clean and ready for analysis or machine learning.
      </p>
+     
      <a href="https://github.com/srihagara123/ACM-SIG-AI-Recruitments-/tree/main/Task-1-Data-Preprocessing" >Check Here</a>
     </div>
     <div class="project-card">
@@ -163,5 +406,58 @@ transform:translateY(-5px);
       <a href="https://github.com/srihagara123/PORTFOLIO_WEBSITE">Check Here</a>
     </div>
   </section>
+  <!-- Footer -->
+<footer>
+  <div class="footer-container">
+
+    <!-- About Me -->
+    <div class="footer-about">
+      <h3>About Me</h3>
+      <p>I’m Sriha Gara, a Computer Science student specializing in AI & ML. 
+         Passionate about building intelligent systems, data analysis, and modern web development.</p>
+    </div>
+
+    <!-- Academic / Office Info -->
+    <div class="footer-office">
+      <h3>Academic Info</h3>
+      <p>Amrita Vishwa Vidyapeetham, Kerala</p>
+      <p>B.Tech CSE (AI & ML), 2025–2029</p>
+      <p>Email: <a href="mailto:garasriha@gmail.com">garasriha@gmail.com</a></p>
+      <p>Phone: +91-9876543210</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Connect / Newsletter -->
+    <div class="footer-newsletter">
+      <h3>Connect</h3>
+      <form>
+        <input type="email" placeholder="Enter your email id" required>
+        <button type="submit">➤</button>
+      </form>
+      <div class="social-icons">
+        <a href="https://github.com/srihagara123" target="_blank" title="GitHub">🐙</a>
+        <a href="https://www.linkedin.com/feed/" target="_blank" title="LinkedIn">🔗</a>
+        <a href="mailto:garasriha@gmail.com" title="Email">📧</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bottom">
+    <p>&copy; 2026 Sriha Gara - All Rights Reserved.</p>
+  </div>
+</footer>
+
 </body>
 </html>

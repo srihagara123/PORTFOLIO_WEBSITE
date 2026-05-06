@@ -6,118 +6,301 @@
 <title>About - Portfolio</title>
 
 <style>
-body{
-     font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: white; 
-      color: #333;
-    
-}
-.menu h1{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 80px;
-background:white;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5; 
+  color: #333;
 }
 
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
+/* Header Navigation */
+.top h1 {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 80px;
+  background:white;
 }
 
-.circle{
-width:40px;
-height:40px;
-background:#7c3aed;
-color:white;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:bold;
-}
-nav a{
-text-decoration:none;
-color:black;
-margin-left:25px;
-font-size:18px;
-padding:8px 15px;
-border-radius:6px;
-
-transition:0.3s;
+.logo {
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 
-
-
-nav a:hover{
-background:#7c3aed;
-color:white;
-
-transform:translateY(-5px);
+.circle {
+  width:40px;
+  height:40px;
+  background:#7c3aed;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
 }
 
+nav a {
+  text-decoration:none;
+  color:black;
+  margin-left:25px;
+  font-size:18px;
+  padding:8px 15px;
+  border-radius:6px;
+  transition:0.3s;
+}
 
- header {
-      background: white;
-      color: black;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    header p {
-      margin: 5px 0 0;
-      font-size: 16px;
-    }
+nav a:hover {
+  background:#7c3aed;
+  color:white;
+  transform:translateY(-5px);
+}
+
+header {
+  background:white;
+  color:black;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+header p {
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
 .btn {
   display: inline-block;
   padding: 10px 20px;
   background: #7c3aed;
-  color:#fff;
+  color:black;
   text-decoration: none;
   border-radius: 4px;
 }
- .about {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 30px;
-      background-color:#f5f5f5;
-    }
+
+/* Contact Card */
+.contact-card {
+  display: inline-block;
+  width: 520px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #e9e4f5;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  text-align: left;
+}
+.contact-card h2 ,h3 {
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+}
+.contact-card p {
+  font-size: 15px;
+  margin: 8px 0;
+}
+.social-links {
+  text-align: center;
+  margin-top: 20px;
+}
+.social-links a img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.social-links a img:hover {
+  transform: scale(1.2);
+}
+
+/* Academic Section (Vertical Cards) */
+.academic-section {
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+}
+.academic-section h2 {
+  text-align: center;
+  color: #7c3aed;
+  margin-bottom: 20px;
+}
+.info-card {
+  background: #e9e4f5;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 25px;
+}
+.info-card h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+/* Nested Cards */
+.nested-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+  justify-content: center; /* centers them nicely */
+}
+
+.nested-card {
+  width: 140px;         /* fixed width */
+  height: 60px;         /* fixed height */
+  background: #7c3aed;  /* purple theme */
+  color: #fff;
+  text-align: center;
+  display: flex;        /* centers text inside */
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.nested-card:hover {
+  transform: scale(1.05);
+  background: #5b2bbd; /* darker purple on hover */
+}
+
+/* Footer */
+footer {
+  background: #121212; /* dark background */
+  color: #fff;
+  padding: 50px 20px;
+  margin-top: 60px;
+  border-top: 3px solid #7c3aed; /* purple accent line */
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+.footer-container div {
+  flex: 1;
+  min-width: 220px;
+}
+.footer-container h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #7c3aed; /* purple headings */
+}
+.footer-container p,
+.footer-container a {
+  font-size: 14px;
+  color: #ccc;
+  text-decoration: none;
+}
+.footer-container a:hover {
+  color: #7c3aed;
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-links li {
+  margin-bottom: 8px;
+}
+.footer-newsletter form {
+  display: flex;
+  margin-bottom: 15px;
+}
+.footer-newsletter input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+.footer-newsletter button {
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+.footer-newsletter button:hover {
+  background: #5b2bbd;
+}
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+.social-icons a {
+  font-size: 20px;
+  color: #ccc;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons a:hover {
+  color: #7c3aed;
+  transform: scale(1.2);
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .top h1 { padding: 15px 40px; }
+  nav a { font-size: 16px; margin-left: 15px; }
+  .contact-card { width: 80%; margin: 30px auto; padding: 25px; }
+}
+@media (max-width: 768px) {
+  .top { flex-direction: column; padding: 15px; text-align: center; }
+  nav { margin-top: 10px; }
+  nav a { display: block; margin: 8px 0; font-size: 15px; }
+  header h1 { font-size: 24px; }
+  header p { font-size: 14px; }
+  .contact-card { width: 95%; margin: 20px auto; padding: 20px; }
+  .contact-card p { font-size: 14px; }
+  .social-links a img { width: 35px; height: 35px; }
+  .footer-container { flex-direction: column; text-align: center; }
+  .footer-newsletter form { flex-direction: column; }
+  .footer-newsletter input, .footer-newsletter button {
+    width: 100%; border-radius: 4px; margin-bottom: 10px;
+  }
+ 
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .nested-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nested-card {
+    width: 90%;   /* full width on mobile */
+    height: auto; /* adjust height naturally */
+  }
+}
+@media (max-width: 480px) {
+  .circle { width: 30px; height: 30px; font-size: 14px; }
+  .logo h2 { font-size: 18px; }
+  nav a { font-size: 14px; padding: 6px 10px; }
+  header h1 { font-size: 20px; }
+  header p { font-size: 12px; }
+  .contact-card { width: 100%; margin: 15px auto; padding: 15px; font-size: 14px; }
+  .contact-card h2, .contact-card h3 { font-size: 16px; }
+  .social-links a img { width: 30px; height: 30px; }
+}
 
 
-.edu-box{
-     display: inline-block;
-      width: 280px; 
-      height: 200px;
-      margin: 20px;
-      padding: 25px;
-      background:#e9e4f5; 
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2); 
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
- .edu-box:hover {
-      transform: translateY(-8px);
- }
-.edu-box h3{
-    color:black;
-    text-align: center;
-    padding:10px;
-  
-}
 
 </style>
 </head>
 
 <body>
-    <header class="menu">
+<header class="menu">
 
 <div class="logo">
 <div class="circle">S</div>
@@ -137,36 +320,113 @@ transform:translateY(-5px);
     <p>G. sriha | computer Science Background</p>
 </header>
 
-<section class="about">
-<div class="edu-box">
-<h3>School</h3>
-<p>Bhashyam High School</p>
-<p> Upto To 10th Grade</p>
-<p>period : 2013-23</p>
-</div>
+<section class="academic-section">
+  <h2>Academic Details</h2>
 
-<div class="edu-box">
-<h3>Intermediate</h3>
-<p>NRI Junior College</p>
-<p>MPC Stream</p>
-<p>period : 2023-25</p>
-</div>
+  <!-- School -->
+  <div class="info-card">
+    <h3>School</h3>
+    <p>Bhashyam High School</p>
+    <p>Upto 10th Grade</p>
+    <p>Period: 2013–2023</p>
+  </div>
 
-<div class="edu-box">
-<h3>B.Tech</h3>
-<p>Amrita Vishwa Vidyapeetham</p>
-<p>CSE (AI & ML)</p>
-<p>1st Year</p>
-<p>Period : 2025-29</p>
-</div>
+  <!-- Intermediate -->
+  <div class="info-card">
+    <h3>Intermediate</h3>
+    <p>NRI Junior College</p>
+    <p>MPC Stream</p>
+    <p>Period: 2023–2025</p>
+  </div>
 
-<div class="edu-box">
-<h3>Future Goal</h3>
-<p>AI / ML Research</p>
-<p>Software Development</p>
-<p>Tech Innovation</p>
-</div>
+  <!-- B.Tech -->
+  <div class="info-card">
+    <h3>B.Tech</h3>
+    <p>Amrita Vishwa Vidyapeetham</p>
+    <p>CSE (AI & ML)</p>
+    <p>Period: 2025–2029</p>
+  </div>
+
+  <!-- Skills -->
+  <h2>Skills Learned</h2>
+  <div class="info-card">
+    <h3>Programming Skills</h3>
+    <div class="nested-cards">
+      <div class="nested-card">Python</div>
+      <div class="nested-card">HTML</div>
+      <div class="nested-card">CSS</div>
+      <div class="nested-card">JavaScript</div>
+      <div class="nested-card">Java</div>
+    </div>
+  </div>
+
+  <!-- Future Goals -->
+  <h2>Future Goals</h2>
+  <div class="info-card">
+    <h3>Career Aspirations</h3>
+    <div class="nested-cards">
+      <div class="nested-card">AI/ML Engineer</div>
+      <div class="nested-card">Deep Learning Specialist</div>
+      <div class="nested-card">Data Scientist</div>
+      <div class="nested-card">NLP Engineer</div>
+      <div class="nested-card">Computer Vision Developer</div>
+    </div>
+  </div>
 </section>
 
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+
+    <!-- About Me -->
+    <div class="footer-about">
+      <h3>About Me</h3>
+      <p>I’m Sriha Gara, a Computer Science student specializing in AI & ML. 
+         Passionate about building intelligent systems, data analysis, and modern web development.</p>
+    </div>
+
+    <!-- Academic / Office Info -->
+    <div class="footer-office">
+      <h3>Academic Info</h3>
+      <p>Amrita Vishwa Vidyapeetham, Kerala</p>
+      <p>B.Tech CSE (AI & ML), 2025–2029</p>
+      <p>Email: <a href="mailto:garasriha@gmail.com">garasriha@gmail.com</a></p>
+      <p>Phone: +91-9876543210</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Connect / Newsletter -->
+    <div class="footer-newsletter">
+      <h3>Connect</h3>
+      <form>
+        <input type="email" placeholder="Enter your email id" required>
+        <button type="submit">➤</button>
+      </form>
+      <div class="social-icons">
+        <a href="https://github.com/srihagara123" target="_blank" title="GitHub">🐙</a>
+        <a href="https://www.linkedin.com/feed/" target="_blank" title="LinkedIn">🔗</a>
+        <a href="mailto:garasriha@gmail.com" title="Email">📧</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bottom">
+    <p>&copy; 2026 Sriha Gara - All Rights Reserved.</p>
+  </div>
+</footer>
+
+
 </body>
-</h
+</html>
