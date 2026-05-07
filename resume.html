@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About - Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gara Sriha Resume</title>
 
 <style>
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -81,93 +82,78 @@ header p {
   border-radius: 4px;
 }
 
-/* Contact Card */
-.contact-card {
-  display: inline-block;
-  width: 520px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #e9e4f5;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  text-align: left;
-}
-.contact-card h2 ,h3 {
-  text-align: center;
-  color: black;
-  margin-bottom: 20px;
-}
-.contact-card p {
-  font-size: 15px;
-  margin: 8px 0;
-}
-.social-links {
-  text-align: center;
-  margin-top: 20px;
-}
-.social-links a img {
-  width: 40px;
-  height: 40px;
-  margin: 0 10px;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-.social-links a img:hover {
-  transform: scale(1.2);
+.container{
+    max-width:900px;
+    margin:auto;
+    background:rgb(10, 39, 74);
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+
+    display:flex;
+    flex-direction:column;
 }
 
-/* Academic Section (Vertical Cards) */
-.academic-section {
-  width: 90%;
-  max-width: 700px;
-  margin: 40px auto;
-}
-.academic-section h2 {
-  text-align: center;
-  color: #7c3aed;
-  margin-bottom: 20px;
-}
-.info-card {
-  background: #e9e4f5;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-  padding: 20px;
-  margin-bottom: 25px;
-}
-.info-card h3 {
-  color: #333;
-  margin-bottom: 10px;
-}
-/* Nested Cards */
-.nested-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 10px;
-  justify-content: center; /* centers them nicely */
+.profile{
+display:flex;
+flex-direction:column;
+align-items:center;
+    text-align:center;
 }
 
-.nested-card {
-  width: 140px;         /* fixed width */
-  height: 60px;         /* fixed height */
-  background: #7c3aed;  /* purple theme */
-  color: #fff;
-  text-align: center;
-  display: flex;        /* centers text inside */
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
+.profile img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:4px solid #4a6cf7;
 }
 
-.nested-card:hover {
-  transform: scale(1.05);
-  background: #5b2bbd; /* darker purple on hover */
+h1{
+    margin:10px 0 5px;
+    color:bisque;
 }
 
+.section{
+    margin-top:30px;
+}
+
+.section h2{
+    color:#4a6cf7;
+    border-bottom:2px solid #ddd;
+    padding-bottom:5px;
+}
+
+.info{
+    margin:8px 0;
+}
+
+.academic-item{
+    background:#f1f4ff;
+    padding:10px;
+    margin:10px 0;
+    border-left:4px solid #4a6cf7;
+}
+
+.skills span{
+    background:#4a6cf7;
+    color:white;
+    padding:6px 10px;
+    border-radius:5px;
+    margin:5px;
+    display:inline-block;
+}
+
+.projects li{
+    margin:8px 0;
+}
+
+a{
+    color:#4a6cf7;
+    text-decoration:none;
+}
+p,ul{
+    color:white;
+}
 /* Footer */
 footer {
   background: #121212; /* dark background */
@@ -249,19 +235,6 @@ footer {
   font-size: 13px;
   color: #aaa;
 }
-
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .top h1 {
-     padding: 15px 40px;
-     }
-  nav a { 
-    font-size: 16px; margin-left: 15px;
-   }
-  .contact-card {
-     width: 80%; margin: 30px auto; padding: 25px; 
-    }
-}
 @media (max-width: 768px) {
   .top { 
     flex-direction: column; padding: 15px; text-align: center; 
@@ -278,12 +251,7 @@ footer {
   header p { 
     font-size: 14px; 
   }
-  .contact-card {
-     width: 95%; margin: 20px auto; padding: 20px; 
-    }
-  .contact-card p { 
-    font-size: 14px;
-   }
+ 
   .social-links a img { 
     width: 35px; height: 35px;
    }
@@ -298,17 +266,6 @@ footer {
     width: 100%; border-radius: 4px; margin-bottom: 10px;
   }
  
-}
-/* Responsive */
-@media (max-width: 768px) {
-  .nested-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-  .nested-card {
-    width: 90%;   /* full width on mobile */
-    height: auto; /* adjust height naturally */
-  }
 }
 @media (max-width: 480px) {
   .circle { 
@@ -326,27 +283,12 @@ footer {
   header p { 
     font-size: 12px; 
   }
-  .contact-card {
-     width: 100%;
-      margin: 15px auto; 
-      padding: 15px;
-       font-size: 14px; 
-      }
-  .contact-card h2, .contact-card h3 {
-     font-size: 16px;
-     }
-  .social-links a img { 
-    width: 30px; height: 30px;
-   }
-}
-
-
 
 </style>
 </head>
 
 <body>
-<header class="menu">
+    <header class="menu">
 
 <div class="logo">
 <div class="circle">S</div>
@@ -355,10 +297,12 @@ footer {
 
 <nav>
 <a  href="index.html">Home</a>
-<a class="btn" href="about.html">About</a>
+<a  href="about.html">About</a>
 <a href="projects.html">Projects</a>
-<a href="resume.html">resume</a>
+<a  class ="btn" href="resume.html">resume</a>
 <a href="contact.html">Contact</a>
+
+
 </nav>
 
 </header>
@@ -367,60 +311,81 @@ footer {
     <p>G. sriha | computer Science Background</p>
 </header>
 
-<section class="academic-section">
-  <h2>Academic Details</h2>
 
-  <!-- School -->
-  <div class="info-card">
-    <h3>School</h3>
-    <p>Bhashyam High School</p>
-    <p>Upto 10th Grade</p>
-    <p>Period: 2013–2023</p>
-  </div>
+<div class="container">
 
-  <!-- Intermediate -->
-  <div class="info-card">
-    <h3>Intermediate</h3>
-    <p>NRI Junior College</p>
-    <p>MPC Stream</p>
-    <p>Period: 2023–2025</p>
-  </div>
+<div class="profile">
+<img src="profile1.webp" alt ="my profile">
+<h1>Gara Sriha</h1>
+<p>Father: Gara Murali</p>
+<p>Mother: Gara Suguna</p>
+<p>Address: Palasa, Srikakulam, Andhra Pradesh, India</p>
+</div>
 
-  <!-- B.Tech -->
-  <div class="info-card">
-    <h3>B.Tech</h3>
-    <p>Amrita Vishwa Vidyapeetham</p>
-    <p>CSE (AI & ML)</p>
-    <p>Period: 2025–2029</p>
-  </div>
+<div class="section">
+<h2>Contact Details</h2>
 
-  <!-- Skills -->
-  <h2>Skills Learned</h2>
-  <div class="info-card">
-    <h3>Programming Skills</h3>
-    <div class="nested-cards">
-      <div class="nested-card">Python</div>
-      <div class="nested-card">HTML</div>
-      <div class="nested-card">CSS</div>
-      <div class="nested-card">JavaScript</div>
-      <div class="nested-card">Java</div>
-    </div>
-  </div>
+<p class="info">📞 Phone: 9876543210</p>
+<p class="info">💬 WhatsApp: 9876543210</p>
+<p class="info">📧 Gmail: 
+<a href="mailto:garasriha@gmail.com">garasriha@gmail.com</a>
+</p>
 
-  <!-- Future Goals -->
-  <h2>Future Goals</h2>
-  <div class="info-card">
-    <h3>Career Aspirations</h3>
-    <div class="nested-cards">
-      <div class="nested-card">AI/ML Engineer</div>
-      <div class="nested-card">Deep Learning Specialist</div>
-      <div class="nested-card">Data Scientist</div>
-      <div class="nested-card">NLP Engineer</div>
-      <div class="nested-card">Computer Vision Developer</div>
-    </div>
-  </div>
-</section>
+</div>
 
+<div class="section">
+<h2>Academic Details</h2>
+
+<div class="academic-item">
+<b>Primary School  :  Bhashyam school</b><br>
+2012 - 2017
+</div>
+
+<div class="academic-item">
+<b>High School  :  Bhashyam school</b><br>
+2017 - 2022
+</div>
+
+<div class="academic-item">
+<b>Intermediate : NRI College</b><br>
+2022 - 2025
+</div>
+
+<div class="academic-item">
+<b>B.Tech  : Amrita Vishwa Vidyapeetam,Amritapuri(Computer Science Engineering)</b><br>
+2025 - Present
+</div>
+
+</div>
+
+<div class="section">
+<h2>Skills (AI Related)</h2>
+
+<div class="skills">
+<span>Python</span>
+<span>Machine Learning</span>
+<span>Deep Learning</span>
+<span>Data Analysis</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>Git</span>
+</div>
+
+</div>
+
+<div class="section">
+<h2>Projects</h2>
+
+<ul class="projects">
+<li>Student Performance Prediction using Machine Learning</li>
+<li>AI Chatbot using Python</li>
+<li>Personal Portfolio Website</li>
+<li>Image Classification using Deep Learning</li>
+</ul>
+
+</div>
+
+</div>
 <!-- Footer -->
 <footer>
   <div class="footer-container">
@@ -473,7 +438,6 @@ footer {
     <p>&copy; 2026 Sriha Gara - All Rights Reserved.</p>
   </div>
 </footer>
-
 
 </body>
 </html>

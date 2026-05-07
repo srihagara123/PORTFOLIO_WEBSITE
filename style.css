@@ -16,7 +16,8 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 80px;
-background:white;
+background:black;
+color: white;
 }
 
 .logo{
@@ -38,7 +39,7 @@ font-weight:bold;
 }
 nav a{
 text-decoration:none;
-color:black;
+color:white;
 margin-left:25px;
 font-size:18px;
 padding:8px 15px;
@@ -120,27 +121,6 @@ width:350px;
 border-radius:20px;
 background:white;
 padding:10px;
-}
-
-/* Base styles (already in your code) */
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  header {
-    padding: 15px 40px;
-  }
-
-  .hero {
-    padding: 40px;
-  }
-
-  .hero-left h1 {
-    font-size: 36px;
-  }
-
-  .hero-right img {
-    width: 280px;
-  }
 }
 footer {
   background: #121212; /* dark background */
@@ -236,6 +216,28 @@ footer {
   padding-top: 15px;
   font-size: 13px;
   color: #aaa;
+}
+
+
+/* Base styles (already in your code) */
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  header {
+    padding: 15px 40px;
+  }
+
+  .hero {
+    padding: 40px;
+  }
+
+  .hero-left h1 {
+    font-size: 36px;
+  }
+
+  .hero-right img {
+    width: 280px;
+  }
 }
 
 
